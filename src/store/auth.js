@@ -50,7 +50,7 @@ export default {
       commit("setUserProfile", {});
 
       // redirect to login view
-      router.push("/login");
+      router.push("/");
     },
   },
 };

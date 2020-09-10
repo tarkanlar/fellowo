@@ -37,8 +37,8 @@
                 <v-col
                   class="d-flex flex-column"
                   cols="2"
-                  v-for="(dates, index) in availableTimes"
-                  :key="index"
+                  v-for="dates in availableTimes"
+                  :key="dates.id"
                 >
                   <small>{{
                     moment(dates.date).format("ddd, Do MM YYYY")
@@ -52,10 +52,10 @@
                     <v-btn
                       outlined
                       class="mb-2"
-                      v-for="(times, index) in dates.times"
-                      :key="index"
+                      v-for="times in dates.times"
+                      :key="times.id"
                       color="primary"
-                      >{{ times }}</v-btn
+                      >{{ times.time }}</v-btn
                     >
                   </v-btn-toggle>
                 </v-col>
@@ -93,23 +93,68 @@ export default {
     },
   },
   data: () => ({
+    toggle_multiple: [],
     count: 0,
     availableTimes: [
       {
-        date: "Thu Sep 10 2020 20:44:04 GMT+0300 (GMT+03:00)",
-        times: ["14:00", "16:00"],
+        id: 1,
+        date: "2020-05-21 19:43:58.099745+00",
+        times: [
+          {
+            id: 11,
+            time: "14:00",
+          },
+          {
+            id: 12,
+            time: "16:00",
+          },
+        ],
       },
       {
-        date: "Fri Sep 11 2020 20:44:04 GMT+0300 (GMT+03:00)",
-        times: ["14:00", "16:00"],
+        id: 2,
+        date: "2020-05-22 19:43:58.099745+00",
+        times: [
+          {
+            id: 21,
+            time: "14:00",
+          },
+          {
+            id: 22,
+            time: "16:00",
+          },
+        ],
       },
       {
-        date: "Sat Sep 12 2020 20:44:04 GMT+0300 (GMT+03:00)",
-        times: ["14:00", "16:00"],
+        id: 3,
+        date: "2020-05-23 19:43:58.099745+00",
+        times: [
+          {
+            id: 31,
+            time: "14:00",
+          },
+          {
+            id: 32,
+            time: "16:00",
+          },
+        ],
       },
       {
-        date: "Sun Sep 13 2020 20:44:04 GMT+0300 (GMT+03:00)",
-        times: ["14:00", "16:00", "17:00", "18:00"],
+        id: 4,
+        date: "2020-05-24 19:43:58.099745+00",
+        times: [
+          {
+            id: 41,
+            time: "14:00",
+          },
+          {
+            id: 42,
+            time: "16:00",
+          },
+          {
+            id: 43,
+            time: "18:00",
+          },
+        ],
       },
     ],
   }),

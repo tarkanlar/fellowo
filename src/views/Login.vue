@@ -28,6 +28,9 @@
               <v-card-actions>
                 <v-spacer></v-spacer>
                 <v-btn @click="login()" color="primary">Login</v-btn>
+                <v-btn @click="socialLogin()" color="primary" outlined=""
+                  >Login With Google</v-btn
+                >
               </v-card-actions>
             </v-card>
           </v-col>

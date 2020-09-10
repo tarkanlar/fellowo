@@ -8,7 +8,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Inndex",
+    name: "Index",
     component: () =>
       import(/* webpackChunkName: "login" */ "../views/Index.vue"),
   },
