@@ -8,7 +8,7 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <UserPoint />
-      <v-btn text to="/" small color="primary" class="text--secondary">
+      <v-btn text to="/home" small color="primary" class="text--secondary">
         <v-icon small left>mdi-home</v-icon>
         HOME
       </v-btn>
@@ -35,7 +35,7 @@
           <v-list-item @click="() => {}">
             <v-list-item-title>Help</v-list-item-title>
           </v-list-item>
-          <v-list-item @click="() => {}">
+          <v-list-item @click.prevent="logout">
             <v-list-item-title>Logout</v-list-item-title>
           </v-list-item>
         </v-list>
@@ -48,6 +48,11 @@ import UserPoint from "./UserPoint";
 export default {
   components: {
     UserPoint,
+  },
+  methods: {
+    logout() {
+      this.$store.dispatch("logout");
+    },
   },
 };
 </script>
