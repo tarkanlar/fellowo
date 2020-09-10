@@ -7,9 +7,15 @@
     </v-badge>
 
     <v-card-text>
-      <strong>Tarkan Anlar</strong>
-      <div class="subtitle-2">had 5 meetigs</div>
-      <div class="subtitle-2 font-weight-light">last on 9.10.20</div>
+      <v-list-item-content>
+        <v-list-item-title class="subtitle font-weight-bold"
+          >Tarkan Anlar</v-list-item-title
+        >
+        <v-list-item-subtitle>had 5 meetigs</v-list-item-subtitle>
+        <v-list-item-subtitle class="font-weight-light"
+          >last on 9.10.20</v-list-item-subtitle
+        >
+      </v-list-item-content>
     </v-card-text>
   </v-card>
 </template>

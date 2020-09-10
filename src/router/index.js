@@ -19,6 +19,35 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "points" */ "../views/Points.vue"),
   },
+  {
+    path: "/profile",
+    name: "Profile",
+    component: () =>
+      import(/* webpackChunkName: "points" */ "../views/Profile.vue"),
+  },
+  {
+    path: "/weekly",
+    name: "Weekly",
+    component: () =>
+      import(/* webpackChunkName: "weekly" */ "../views/Weekly.vue"),
+  },
+  {
+    path: "/invite",
+    name: "Invite",
+    component: () =>
+      import(/* webpackChunkName: "invite" */ "../views/Invite.vue"),
+  },
+  {
+    path: "/faq",
+    name: "Faq",
+    component: () => import(/* webpackChunkName: "faq" */ "../views/Faq.vue"),
+  },
+  {
+    path: "/settings",
+    name: "Settings",
+    component: () =>
+      import(/* webpackChunkName: "settings" */ "../views/Settings.vue"),
+  },
 ];
 
 const router = new VueRouter({

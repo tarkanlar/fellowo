@@ -38,7 +38,16 @@
     </v-container>
   </v-main>
 </template>
-
+<style scoped>
+@media only screen and (min-width: 920px) {
+  .home-container {
+    max-width: 920px;
+  }
+}
+.round-avatar {
+  border-radius: 50% !important;
+}
+</style>
 <script>
 import UserSmallCard from "../components/UserSmallCard";
 export default {

@@ -13,7 +13,7 @@
     <v-avatar size="32">
       <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John" />
     </v-avatar>
-    <v-btn text small class="text--secondary">
+    <v-btn to="/profile" text small class="text--secondary">
       TARKAN
     </v-btn>
   </div>

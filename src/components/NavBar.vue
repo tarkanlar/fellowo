@@ -2,7 +2,9 @@
   <v-card color="grey lighten-3 fill-height" flat height="49px" tile>
     <v-toolbar class="elevation-0" dense>
       <v-toolbar-title>
-        <img src="../assets/logo-dark.svg" height="30" />
+        <router-link to="/">
+          <img src="../assets/logo-dark.svg" height="30" />
+        </router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <UserPoint />
@@ -10,22 +12,34 @@
         <v-icon small left>mdi-home</v-icon>
         HOME
       </v-btn>
-      <v-btn text small class="text--secondary">
+      <v-btn to="/weekly" text small class="text--secondary">
         <v-icon small left>mdi-calendar</v-icon>
         MEETINGS
       </v-btn>
-      <v-btn text small class="text--secondary">
+      <v-btn to="/invite" text small class="text--secondary">
         <v-icon small left>mdi-email-outline</v-icon>
         INVITE
       </v-btn>
-      <v-btn text small class="text--secondary">
+      <v-btn to="/settings" text small class="text--secondary">
         <v-icon small left>mdi-cog</v-icon>
         SETTINGS
       </v-btn>
+      <v-menu offset-x offset-y left bottom>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn icon v-bind="attrs" v-on="on">
+            <v-icon>mdi-dots-vertical</v-icon>
+          </v-btn>
+        </template>
 
-      <v-btn icon class="text--secondary">
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
+        <v-list dense>
+          <v-list-item @click="() => {}">
+            <v-list-item-title>Help</v-list-item-title>
+          </v-list-item>
+          <v-list-item @click="() => {}">
+            <v-list-item-title>Logout</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
     </v-toolbar>
   </v-card>
 </template>
