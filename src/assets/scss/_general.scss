@@ -1,0 +1,40 @@
+/* 
+// 1. General
+
+
+a {
+  text-decoration: none !important;
+  outline: none;
+}
+body {
+  font-family: $font-primary;
+  color: $dark;
+  background: $body-bg;
+  font-weight: 500;
+  background-color: #f9fcf8;
+}
+p {
+  line-height: 1.8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-secondary;
+  font-weight: 700;
+}
+*/
+
+@media only screen and (min-width: 920px) {
+  .medium-container {
+    max-width: 920px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  .small-container {
+    max-width: 620px;
+  }
+}

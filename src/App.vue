@@ -1,18 +1,16 @@
 <template>
-  <v-app id="inspire">
+  <v-app id="app">
     <NavBar />
-    <Home />
+    <router-view />
   </v-app>
 </template>
 
 <script>
 import NavBar from "./components/NavBar";
-import Home from "./components/Home";
 export default {
   name: "LayoutsDemosBaselineFlipped",
   components: {
     NavBar,
-    Home,
   },
   data: () => ({
     drawer: null,
