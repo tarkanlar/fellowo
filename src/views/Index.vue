@@ -17,21 +17,13 @@
               you
             </p>
             <p>
-              <v-btn
-                @click="
-                  $store.dispatch('notifications/show', {
-                    message: 'test',
-                    color: 'error',
-                  })
-                "
-                color="primary"
-              >
-                Sign Up
+              <v-btn color="primary" class="large vrlps-trigger">
+                Join Our Waitlist!
               </v-btn>
             </p>
 
-            <small> Already have an account?</small>
-            <v-btn color="primary" text small to="/login">Log in here</v-btn>
+            <!--  <small> Already have an account?</small>
+          <v-btn color="primary" text small to="/login">Log in here</v-btn> -->
           </v-col>
           <v-col cols="6">
             <img src="@/assets/images/hero-1.svg" width="600"
