@@ -1,12 +1,6 @@
 <template>
   <div>
-    <v-chip
-      to="/points"
-      class="ma-2"
-      small
-      color="green lighten-1"
-      text-color="white"
-    >
+    <v-chip to="/points" class="ma-2" small color="accent" text-color="white">
       12
       <v-icon small right>mdi-adjust</v-icon>
     </v-chip>

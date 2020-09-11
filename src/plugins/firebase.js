@@ -4,13 +4,14 @@ import "firebase/firestore";
 
 // firebase init
 const firebaseConfig = {
-  apiKey: "AIzaSyAjGOq57t_MDhKwflbyuHDPBePpcEej7kc",
-  authDomain: "vesile5.firebaseapp.com",
-  databaseURL: "https://vesile5.firebaseio.com",
-  projectId: "vesile5",
-  storageBucket: "vesile5.appspot.com",
-  messagingSenderId: "1008617261293",
-  appId: "1:1008617261293:web:5d74e0279d23861104e4e4",
+  apiKey: "AIzaSyDwEC3ZwJv41-9xx_WYcXfiZCzf9Vu4Nx0",
+  authDomain: "fellowo.firebaseapp.com",
+  databaseURL: "https://fellowo.firebaseio.com",
+  projectId: "fellowo",
+  storageBucket: "fellowo.appspot.com",
+  messagingSenderId: "367022280095",
+  appId: "1:367022280095:web:1fccde5ad258dbc07201aa",
+  measurementId: "G-0G9WY4SZBR",
 };
 
 firebase.initializeApp(firebaseConfig);

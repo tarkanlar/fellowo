@@ -3,6 +3,7 @@ import Vuex from "vuex";
 import * as fb from "../plugins/firebase";
 import authModule from "./auth";
 import socialAuthModule from "./socialAuth";
+import notifications from "./notify";
 
 Vue.use(Vuex);
 
@@ -28,6 +29,7 @@ const store = new Vuex.Store({
   modules: {
     authModule,
     socialAuthModule,
+    notifications,
   },
   mutations: {
     setUserProfile(state, val) {

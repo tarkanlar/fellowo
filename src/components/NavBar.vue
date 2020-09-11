@@ -3,7 +3,7 @@
     <v-toolbar class="elevation-0" dense>
       <v-toolbar-title>
         <router-link to="/">
-          <img src="../assets/logo-dark.svg" height="30" />
+          <img src="../assets/favicon.svg" height="36" />
         </router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>

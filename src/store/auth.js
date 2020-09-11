@@ -2,14 +2,21 @@ import router from "../router/index";
 import * as fb from "../plugins/firebase";
 export default {
   actions: {
-    async login({ dispatch }, form) {
-      // sign user in
-      const { user } = await fb.auth.signInWithEmailAndPassword(
-        form.email,
-        form.password
-      );
-      // fetch user profile and set in state
-      dispatch("fetchUserProfile", user);
+    async login({ dispatch }, { email, password }) {
+      try {
+        // sign user in
+        const { user } = await fb.auth.signInWithEmailAndPassword(
+          email,
+          password
+        );
+        dispatch("fetchUserProfile", user);
+      } catch (e) {
+        // display error
+        dispatch("notifications/show", {
+          message: e.message,
+          color: "error",
+        });
+      }
     },
     async signup({ dispatch }, form) {
       // sign user up
@@ -35,14 +42,13 @@ export default {
       commit("setUserProfile", userProfile.data());
 
       // change route to dashboard
-      if (
-        router.currentRoute.path === "/login" ||
-        ("/signup" && router.currentRoute.path !== "/home")
-      ) {
-        router.push("/home");
+      if (router.currentRoute.path === "/login") {
+        router.replace("/home").catch((error) => {
+          console.log(error);
+        });
       }
     },
-    async logout({ commit }) {
+    async logout({ commit, dispatch }) {
       // log user out
       await fb.auth.signOut();
 
@@ -51,6 +57,12 @@ export default {
 
       // redirect to login view
       router.push("/");
+
+      // display notification
+      dispatch("notifications/show", {
+        message: "You logged out",
+        color: "info",
+      });
     },
   },
 };

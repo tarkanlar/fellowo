@@ -10,7 +10,7 @@ import "@/assets/css/style.css";
 
 Vue.config.productionTip = false;
 Vue.prototype.moment = moment;
-
+console.log(store);
 let app;
 auth.onAuthStateChanged((user) => {
   if (!app) {
