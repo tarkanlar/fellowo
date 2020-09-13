@@ -32,6 +32,15 @@ const routes = [
         },
       },
       {
+        path: "/community",
+        name: "Community",
+        component: () =>
+          import(/* webpackChunkName: "Community" */ "../views/Community.vue"),
+        meta: {
+          requiresAuth: true,
+        },
+      },
+      {
         path: "/points",
         name: "Points",
         // route level code-splitting
@@ -102,10 +111,10 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   const requiresAuth = to.matched.some((x) => x.meta.requiresAuth);
 
-  if (requiresAuth && !auth.currentUser) {
-    next("/login");
-  } else {
-    next();
-  }
+  // If you no user loggedin forward to index
+  requiresAuth && !auth.currentUser ? next("/") : next();
+
+  // If you can find the page forward it to 404
+  !to.matched.length ? next("/404.html") : next();
 });
 export default router;

@@ -1,6 +1,6 @@
 <template>
   <v-main fluid>
-    <v-container class="fill-height d-flex align-start grey lighten-5" fluid>
+    <v-container class="fill-height d-flex align-center grey lighten-5" fluid>
       <v-container class="small-container">
         <v-row class="mb-9" justify="center" no-gutters>
           <v-col lg="12">

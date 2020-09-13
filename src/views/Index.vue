@@ -17,7 +17,7 @@
               you
             </p>
             <p>
-              <v-btn color="primary" class="large vrlps-trigger">
+              <v-btn color="primary" class="large">
                 Join Our Waitlist!
               </v-btn>
             </p>
